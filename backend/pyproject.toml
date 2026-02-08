@@ -1,0 +1,20 @@
+# [Task]: T-B004
+# [From]: speckit.plan §7
+# [Purpose]: Project metadata, tool configuration
+
+[project]
+name = "todo-api"
+version = "0.1.0"
+description = "FastAPI backend for Todo application with Better Auth session validation"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
